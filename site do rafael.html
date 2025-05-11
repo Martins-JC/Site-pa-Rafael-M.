@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Consultoria Agronômica Menezes</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --primary: #12372A;
+      --secondary: #436850;
+      --accent: #ADBC9F;
+      --light: #FBFADA;
+      --dark: #0f1e17;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
+      scroll-behavior: smooth;
+    }
+    body {
+      background-color: var(--light);
+      color: var(--dark);
+      line-height: 1.6;
+    }
+    header {
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      color: white;
+      padding: 60px 20px;
+      text-align: center;
+      position: relative;
+    }
+    header h1 {
+      font-size: 3rem;
+      animation: fadeInDown 1s ease-out;
+    }
+    nav ul {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      margin-top: 25px;
+      list-style: none;
+      flex-wrap: wrap;
+    }
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.1rem;
+      transition: color 0.3s;
+    }
+    nav ul li a:hover {
+      color: var(--accent);
+    }
+    .login-btn {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background: var(--accent);
+      color: var(--dark);
+      padding: 10px 20px;
+      border: none;
+      border-radius: 6px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    .login-btn:hover {
+      background: var(--light);
+    }
+    section {
+      max-width: 1200px;
+      margin: 80px auto;
+      padding: 0 20px;
+      animation: fadeIn 1.5s ease-in;
+    }
+    h2 {
+      font-size: 2.2rem;
+      margin-bottom: 20px;
+      color: var(--primary);
+    }
+    .mapa-container {
+      width: 100%;
+      height: 500px;
+      border: none;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+    }
+    form input, form textarea {
+      width: 100%;
+      padding: 12px;
+      margin: 12px 0;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      font-size: 1rem;
+    }
+    form button {
+      padding: 12px 30px;
+      background: var(--primary);
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    form button:hover {
+      background: var(--secondary);
+    }
+    footer {
+      background: var(--primary);
+      color: white;
+      text-align: center;
+      padding: 40px 20px;
+    }
+    footer a img {
+      margin: 0 12px;
+      width: 28px;
+      height: 28px;
+      filter: brightness(0) invert(1);
+      transition: transform 0.3s;
+    }
+    footer a img:hover {
+      transform: scale(1.2);
+    }
+    .whatsapp-float {
+      position: fixed;
+      width: 60px;
+      height: 60px;
+      bottom: 20px;
+      right: 20px;
+      z-index: 1000;
+      border-radius: 50%;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+      background-color: #25d366;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: transform 0.3s ease;
+    }
+    .whatsapp-float img {
+      width: 32px;
+      height: 32px;
+    }
+    .whatsapp-float:hover {
+      transform: scale(1.1);
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Consultoria Agronômica Menezes</h1>
+    <button class="login-btn" onclick="window.location.href='login.html'">Login</button>
+    <nav>
+      <ul>
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#mapa">Mapa</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="sobre">
+    <h2>Sobre Nós</h2>
+    <p>Com expertise nacional e internacional, a Menezes Agriculture Consultant oferece soluções agrícolas com base técnica sólida e visão estratégica. Com formações pela USP, UFLA, FGV e Harvard, nosso consultor atua nos principais polos do agronegócio, promovendo inovação e resultados sustentáveis.</p>
+  </section>
+
+  <section id="mapa">
+    <h2>Formação e Atuação</h2>
+    <div class="mapa-container">
+      <iframe
+        src="https://www.google.com/maps/d/embed?mid=1O0uNk5rO3d3J6-Hd_pPXnmszJ_RDKKc&ehbc=2E312F"
+        width="100%"
+        height="100%"
+        frameborder="0"
+        allowfullscreen=""
+        loading="lazy">
+      </iframe>
+    </div>
+    <p style="margin-top: 10px; font-size: 0.95rem;">Mapa com as instituições de ensino onde nosso consultor estudou: USP, UFLA, FGV e Harvard.</p>
+  </section>
+
+  <section id="contato">
+    <h2>Fale Conosco</h2>
+    <form>
+      <input type="text" id="nome" name="nome" placeholder="Seu nome" required />
+      <input type="email" id="email" name="email" placeholder="Seu email" required />
+      <textarea id="mensagem" name="mensagem" rows="5" placeholder="Sua mensagem..."></textarea>
+      <button type="submit">Enviar</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>Desenvolvido por Jônatas</p>
+    <a href="#"><img src="instagram-icon.png" alt="Instagram" /></a>
+    <a href="#"><img src="linkedin-icon.png" alt="LinkedIn" /></a>
+  </footer>
+
+  <a
+    href="https://wa.me/5541997333922"
+    class="whatsapp-float"
+    target="_blank"
+    aria-label="Conversar no WhatsApp">
+    <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" />
+  </a>
+
+  <script>
+    const sections = document.querySelectorAll("section");
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.animation = "fadeIn 1.5s ease forwards";
+        }
+      });
+    }, { threshold: 0.2 });
+
+    sections.forEach(section => {
+      section.style.opacity = 0;
+      observer.observe(section);
+    });
+  </script>
+</body>
+</html>
